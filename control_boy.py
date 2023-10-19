@@ -31,8 +31,12 @@ def create_world():
     boy = Boy()
     game_world.add_object(boy, 1) # 0번에 들감 -> 실험 보이->잔디
 
-    grass = Grass()
+    grass = Grass(60)
     game_world.add_object(grass, 0) # 현재 0번에 들감 ==> 레이어를 지정해줘서 그리는 순서 조정
+    # 먼저 그려짐
+
+    grass_back = Grass(45)
+    game_world.add_object(grass_back, 2)
 
 
 
